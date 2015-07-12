@@ -50,7 +50,7 @@ public class MainActivity extends Activity implements IArithmeticsListener{
 			}
 		});
 
-		setArithmetics(new Arithmetics(this));
+		setArithmetics(new Arithmetics(this, 2000));
 	}
 
 	private boolean validInput(EditText number_1, EditText number_2) {

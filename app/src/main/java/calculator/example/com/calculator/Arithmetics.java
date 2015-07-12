@@ -6,9 +6,11 @@ package calculator.example.com.calculator;
 public class Arithmetics implements IArithmetics {
 
 	private final IArithmeticsListener listener;
+	private final long sleepTimeout;
 
-	public Arithmetics(IArithmeticsListener listener) {
+	public Arithmetics(IArithmeticsListener listener, long sleepTimout) {
 		this.listener = listener;
+		this.sleepTimeout = sleepTimout;
 	}
 
 	public int multiply(int num1, int num2) {
@@ -20,7 +22,7 @@ public class Arithmetics implements IArithmetics {
 			@Override
 			public void run() {
 				try {
-					sleep(2000);
+					sleep(sleepTimeout);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
